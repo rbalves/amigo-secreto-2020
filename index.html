@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Amigo Oculto 2020</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="jumbotron text-center" style="background-color: #2e8b57;color: #fff;">
+      <h1>Amigo Oculto 2020</h1>
+      <h3>Feliz Natal!</h3>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12" id="loading">
+              <h2>Aguarde...</h2>
+          </div>
+        </div>
+        <div id="form" style="visibility: hidden;">
+          <div id="step-nome">
+            <div class="form-group">
+              <label for="name">Quem é você?</label>
+              <select class="form-control" id="name">
+                <option>Francisco</option>
+                <option>Luciene</option>
+                <option>Hélen</option>
+                <option>Laíza</option>
+                <option>Davi</option>
+                <option>Demys</option>
+                <option>Rafael</option>
+                <option>Dandara</option>
+                <option>Sérgio</option>
+                <option>Luciana</option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-success" onclick="avancar()">Avançar</button>
+          </div>
+
+          <h3 id="hello" style="visibility: hidden;">Olá, Fulano!</h3>
+
+          <div id="step-login" style="visibility: hidden;">
+            <div class="form-group">
+              <label for="password">Informe a sua senha:</label>
+              <input type="password" class="form-control" id="password-login">
+            </div>
+            <button type="button" class="btn btn-success" onclick="login()">Acessar</button>
+            <a class="btn btn-outline-primary " href="index.html" role="button">Voltar</a>
+          </div>
+
+          <div id="step-cadastro" style="visibility: hidden;">
+            <div class="form-group">
+              <label for="password">Informe uma senha:</label>
+              <input type="password" class="form-control" id="password-cadastro">
+            </div>
+            <button type="button" class="btn btn-success" onclick="cadastrar()">Cadastrar</button>
+            <a class="btn btn-outline-primary " href="index.html" role="button">Voltar</a>
+          </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/draw.js" charset="utf-8"></script>
+    <script>
+      Promise.all([getParticipants(), getDraw()]).then(()=> {
+        const loading = document.getElementById('loading');
+        loading.innerHTML = '';
+        const form = document.getElementById('form');
+        form.style.visibility = 'visible'
+      })
+    </script>
+    
+  </body>
+</html>

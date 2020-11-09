@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Amigo Oculto 2020</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="jumbotron text-center" style="background-color: #2e8b57;color: #fff;">
+      <h1>Amigo Oculto 2020</h1>
+      <h3>Feliz Natal!</h3>
+    </div>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h3 id="welcome"></h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1 id="message"></h1>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-outline-danger" onclick="logout()">Sair do aplicativo</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/draw.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      isLogged();
+    </script>
+  </body>
+</html>
